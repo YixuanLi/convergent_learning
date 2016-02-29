@@ -1,0 +1,40 @@
+name: "StitchNet"
+
+input: "net0"
+input_dim: 32
+input_dim: 96
+input_dim: 55
+input_dim: 55
+
+input: "net1"
+input_dim: 32
+input_dim: 96
+input_dim: 55
+input_dim: 55
+
+debug_info: true
+
+layer {
+  name: "stitch0"
+  type: "Convolution"
+  bottom: "net0"
+  top: "stitch0"
+  convolution_param {
+    num_output: 96
+    kernel_size: 1
+    stride: 1
+    weight_filler {
+      type: "gaussian" # initialize the filters from a Gaussian
+      std: .01         # distribution with stdev 0.01 (default mean: 0)
+    }
+  }
+}
+
+layer {
+  name: "loss"
+  type: "EuclideanLoss"
+  bottom: "stitch0"
+  bottom: "net1"
+  top: "loss"
+  loss_weight: 1
+}

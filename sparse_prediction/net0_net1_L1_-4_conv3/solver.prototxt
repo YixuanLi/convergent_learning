@@ -1,0 +1,15 @@
+base_lr: .001
+lr_policy: "step"
+gamma: 0.5
+stepsize: 1500
+display: 1
+max_iter: 10000000
+momentum: 0.98
+regularization_type: "L1"
+weight_decay: 0.0001
+snapshot: 1000
+snapshot_prefix: "stitch"
+#// 0 for CPU, 1 for GPU
+solver_mode: 1
+random_seed: 0
+net: "network.prototxt"
