@@ -6,7 +6,7 @@ This repository contains source code necessary to reproduce the results presente
 @inproceedings{li_2016_ICLR
   title={Convergent Learning: Do different neural networks learn the same representations?},
   author={Li, Yixuan and Yosinski, Jason and Clune, Jeff and Lipson, Hod and Hopcroft, John},
-  booktitle={International Conference on Learning Representation (ICLR) 2016)},
+  booktitle={International Conference on Learning Representation (ICLR '16)},
   year={2016}
 }
 ```
