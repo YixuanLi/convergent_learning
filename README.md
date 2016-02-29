@@ -31,10 +31,10 @@ $ ipython notebook
 Select the `convergent_learning_notebook.ipynb` notebook and execute the included
 code. 
 
-_Shortcut: to skip all the work and just see the results, take a look at [this notebook with cached plots](http://nbviewer.ipython.org/github/yosinski/convnet_transfer/blob/master/plots/transfer_plots.ipynb)._
+_Shortcut: to skip all the work and just see the results, take a look at [this notebook with cached plots]()._
 
 
 
 ## Questions?
 
-Please drop [me](http://cs.cornell.edu/~yli) a line if you have any questions!
+Please drop [me](http://www.cs.cornell.edu/~yli) a line if you have any questions!
