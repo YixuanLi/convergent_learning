@@ -31,7 +31,7 @@ $ ipython notebook
 Select the `convergent_learning_notebook.ipynb` notebook and execute the included
 code. 
 
-_Shortcut: to skip all the work and just see the results, take a look at [this notebook with cached plots]()._
+_Shortcut: to skip all the work and just see the results, take a look at [this notebook with cached plots](http://nbviewer.jupyter.org/github/yixuanli/convergent_learning/blob/master/experiments/convergent_learning_notebook.ipynb)._
 
 
 
