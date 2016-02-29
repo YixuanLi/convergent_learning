@@ -15,7 +15,7 @@ This repository contains source code necessary to reproduce the results presente
 
  We used [Caffe](http://caffe.berkeleyvision.org/) to train the models, and computed necessary statistics including pair-wise unit correlations, unit activation mean, pair-wise unit mutual information etc. In this demo, to minimize the effort for you to try out the fun experiments, we have provided a link for you to download all the necessities (pre-trained models, unit statistics, unit visualizations, pre-trained sparse prediction models). 
 
-To run through the demo, you only need the standard packages of IPython, numpy, [networkx](http://networkx.github.io) and matplotlib packages. Depending on your setup, it may be possible to install these via `pip install ipython numpy matplotlib networkx`.
+To run through the demo, you only need the standard packages of IPython, numpy, [networkx](http://networkx.github.io), sklearn and matplotlib packages. Depending on your setup, it may be possible to install these via `pip install ipython numpy matplotlib networkx sklearn`.
 
 
 ## Run experiments with pre-computed statistics
@@ -31,10 +31,10 @@ $ ipython notebook
 Select the `convergent_learning_notebook.ipynb` notebook and execute the included
 code. 
 
-_Shortcut: to skip all the work and just see the results, take a look at [this notebook with cached plots](http://nbviewer.ipython.org/github/yosinski/convnet_transfer/blob/master/plots/transfer_plots.ipynb)._
+_Shortcut: to skip all the work and just see the results, take a look at [this notebook with cached plots]()._
 
 
 
 ## Questions?
 
-Please drop [me](http://cs.cornell.edu/~yli) a line if you have any questions!
+Please drop [me](http://www.cs.cornell.edu/~yli) a line if you have any questions!
