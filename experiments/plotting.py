@@ -2,12 +2,8 @@
 
 from pylab import *
 
-
-
 def figsize(width,height):
     rcParams['figure.figsize'] = (width,height)
-
-
 
 def get_float_copy(arr):
     '''Returns a copy of an array, upconverting int types to float'''
@@ -16,15 +12,11 @@ def get_float_copy(arr):
     else:
         return arr.copy()
 
-
-
 def norm01(arr):
     arr = get_float_copy(arr)
     arr -= arr.min()
     arr /= arr.max()
     return arr
-
-
 
 def norm01c(arr, center):
     '''Maps the center value to .5'''
@@ -35,8 +27,6 @@ def norm01c(arr, center):
     assert arr.min() >= 0
     assert arr.max() <= 1
     return arr
-
-
 
 def showimage(im, c01=False, bgr=False, axes=None):
     if c01:
@@ -51,15 +41,11 @@ def showimage(im, c01=False, bgr=False, axes=None):
         axes.imshow(im)
     #axis('tight')
 
-
-
 def showimagesc(im, c01=False, bgr=False, center=None, axes=None):
     if center is None:
         showimage(norm01(im), c01=c01, bgr=bgr, axes=axes)
     else:
         showimage(norm01c(im, center), c01=c01, bgr=bgr, axes=axes)
-
-
 
 def saveimage(filename, im):
     matplotlib.image.imsave(filename, im)
@@ -69,8 +55,6 @@ def saveimagesc(filename, im):
 
 def saveimagescc(filename, im, center):
     saveimage(filename, norm01c(im, center))
-
-
 
 def tile_images(data, padsize=1, padval=0, c01=False, width=None):
     '''take an array of shape (n, height, width) or (n, height, width, channels)
@@ -101,12 +85,9 @@ def tile_images(data, padsize=1, padval=0, c01=False, width=None):
     return data
 
 
-
 def vis_square(data, padsize=1, padval=0, c01=False):
     data = tile_images(data, padsize, padval, c01)
     showimage(data, c01=False)
-
-
 
 def looser(ax, xfrac = .05, yfrac=None, semilogx = False, semilogy = False, loglog = False):
     '''Returns a loosened version of the axies specified in ax'''
@@ -139,7 +120,6 @@ def looser(ax, xfrac = .05, yfrac=None, semilogx = False, semilogy = False, logl
 
     return tuple(ax)
 
-
 def crop_one_patch(vis_unit_concat, which='image'):
     '''Which may be opt, image, or deconv. Opt is not always present though!'''
     ratio = int(round(float(vis_unit_concat.shape[0])/vis_unit_concat.shape[1]))
@@ -164,5 +144,3 @@ def crop_one_patch(vis_unit_concat, which='image'):
     one_patch = vis_unit_concat[width*region + border+trim:(width*region + border-trim+one_patch_size),
                                 border+trim:(border-trim+one_patch_size)]
     return one_patch
-
-
