@@ -38,7 +38,6 @@ def vis_for_unit(net_path, layer, unit_idx):
     '''Loads all available vis for unit.'''
     
     patterns = []
-    patterns.append('%s/unit_vis/%s/unit_%04d_*/hs*/montage.jpg' % (net_path, layer, unit_idx))
     patterns.append('%s/unit_vis/%s/unit_%04d/montage_maxim.jpg' % (net_path, layer, unit_idx))
     patterns.append('%s/unit_vis/%s/unit_%04d/montage_deconv.jpg' % (net_path, layer, unit_idx))
     return glob_and_read(patterns)
